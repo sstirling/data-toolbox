@@ -6,24 +6,21 @@
     </head>
     <body>
         <div id="map" style="width:100%; height:300px;"></div>
-        <h1>Deaths during the L.A. riots</h1>
+        <h1>NJAM Data Toolbox</h1>
         <table border=1 cellpadding=7>
-            <th>Name</th>
-            <th>Date</th>
+            <th>Program</th>
             <th>Type</th>
-            <th>Address</th>
-            <th>Age</th>
-            <th>Gender</th>
-            <th>Race</th>
+            <th>Skill Level</th>
+            <th>Website</th>
+            
             {% for obj in object_list %}
             <tr>
-            	<td><a href="{{ obj.id }}/">{{ obj.full_name }}</a></td>
-                <td>{{ obj.date }}</td>
+            	
+                <td><a href="{{ obj.id }}/">{{ obj.program }}</a></td>
                 <td>{{ obj.type }}</td>
-                <td>{{ obj.address }}</td>
-                <td>{{ obj.age }}</td>
-                <td>{{ obj.gender }}</td>
-                <td>{{ obj.race }}</td></tr>
+                <td>{{ obj.skill_level }}</td>
+                <td><a href="{{ obj.website }}/">{{ obj.website }}</a></td>
+                </tr>
             {% endfor %}
         </table>
 
