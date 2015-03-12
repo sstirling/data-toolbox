@@ -10,8 +10,20 @@ body { font-family: 'Open Sans', sans-serif; padding-right: 0px; padding-left: 0
   font-family: Arial, sans-serif;
   line-height: 250px;
   width: 300px;
-  padding: 0 30px;
+  padding: 50 30px;
   text-decoration: none; 
+}
+
+.small.btn {
+  line-height: 250px;
+  width: 150px;
+  padding: 50 50px;
+
+}
+
+.large.btn {
+  line-height: 3em;
+  padding: 0 3.5em; 
 }
 
 .green.btn {
