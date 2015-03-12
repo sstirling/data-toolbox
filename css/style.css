@@ -23,7 +23,8 @@ body { font-family: 'Open Sans', sans-serif; padding-right: 0px; padding-left: 0
 
 .large.btn {
   line-height: 300px;
-  padding: 50 70 50 70px; 
+  width: 250px;
+  padding: 0 3.5em; 
 }
 
 .navy.btn {
