@@ -1,11 +1,22 @@
 <!doctype html>
 <html lang="en">
     <head>
+        
+        <!-- Begin style -->
+        <link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.10.5/css/jquery.dataTables.min.css">
         <link rel="stylesheet" type="text/css" href="http://s3.amazonaws.com/nj-data/test/style.css">
         <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
+        <!--End Style -->
+
+        <!-- Begin Scripts -->
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
         <script type="text/javascript" src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js?2"></script>
+        <script type="text/javascript" src="http://cdn.datatables.net/1.10.5/js/jquery.dataTables.min.js"></script>
+        
 
 
+
+        <!-- End Scripts -->
 
     </head>
     <body>
@@ -24,31 +35,41 @@
         <h1 align="center">Data and Visualization Tools</h1>
         <p align="center">Use the menu below to find the tool you are looking for. Click the name of the program for more information.</p>
         <br>
-        <div align=center><a href="a" class="navy small btn">Mapping Tools</a>
+        <div align=center><a href="../templates/maps.html" class="navy small btn">Mapping Tools</a>
         <a href="b" class="teal small btn">Charting Tools</a>
         <a href="c" class="green small btn">Getting and Analyzing Data</a>
         <a href="d" class="yellow small btn">Programming Tools</a>
         <a href="e" class="orange small btn">Other Data Tools</a></div>
+
 <br>
 <br>
 <br>
-        <table border=1 cellpadding=7>
+        <table id="tools" border=1 cellpadding=7>
+            <thead>
             <th>Program</th>
             <th>Type</th>
             <th>Skill Level</th>
             <th>Website</th>
             
-            {% for obj in object_list %}
+
+        </thead>
+        <tbody>
             <tr>
-            	
+                {% for obj in object_list %}
+
                 <td><a href="{{ obj.id }}/">{{ obj.program }}</a></td>
                 <td>{{ obj.type }}</td>
                 <td>{{ obj.skill_level }}</td>
                 <td><a href="{{ obj.website }}/">{{ obj.website }}</a></td>
                 </tr>
             {% endfor %}
+        </tbody>
         </table>
-
+        <script>
+        $(document).ready( function () {
+        $('#tools').DataTable();
+        } );
+        </script>
         <script type="text/javascript">
             var map = L.map('map').setView([40.705628, -74.344482], 11);
             var mapquestLayer = new L.TileLayer('http://{s}.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.png', {
