@@ -1,4 +1,4 @@
-body { font-family: 'Open Sans', sans-serif; padding-right: 0px; padding-left: 0px; height: auto; }
+body { font-family: 'Open Sans', sans-serif; padding-right: 0px; padding-left: 0px; height: auto;}
 
 
 .btn {
@@ -80,4 +80,60 @@ body { font-family: 'Open Sans', sans-serif; padding-right: 0px; padding-left: 0
     padding: 25px;
     border: 1px solid navy;
     margin: 25px;
+}
+
+.graphicHeader, .graphicSubhead {
+	float: left;
+	width: 100%;
+}
+
+.graphicHeader {
+	font-family: 'Oswald', sans-serif;
+	font-size: 30px;
+	
+	color: #c0d72f;
+}
+.graphicSubhead {
+	font-family: 'Oswald', sans-serif;
+	font-size: 15px;
+	margin: 5px 0 5px;
+
+	color: #646464;
+}
+p.sort-text {
+	font-family: 'Source Sans Pro', sans-serif;
+	border-top: 1px solid #b4b5b4;
+	text-transform: uppercase;
+	font-size: 14px;
+	margin: 10px 0 5px;
+	padding-top: 25px;
+	color: #323232;
+}
+.titleamount {
+	
+	font-family: 'Source Sans Pro', sans-serif;
+	width: auto;
+	font-size: 29px;
+	color: #c0d72f;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.amount {
+	
+	font-family: 'Source Sans Pro', sans-serif;
+	width: auto;
+	font-size: 20px;
+	color: #c0d72f;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.interactiveContainer { 
+	width: 100%;
+	height: auto;
+	float: left;
+	overflow: none;
+	font-family: 'Source Sans Pro', sans-serif;
+	position: relative;
 }
