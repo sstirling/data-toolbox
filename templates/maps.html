@@ -15,7 +15,9 @@
 
 <body>
 
-     <div align=center><a href="a" class="navy small btn">Mapping Tools</a>
+     <div align=center>
+        <a href="/index.html" class="blue small btn">Home</a>
+        <a href="a" class="navy small btn">Mapping Tools</a>
         <a href="b" class="teal small btn">Charting Tools</a>
         <a href="c" class="green small btn">Getting and Analyzing Data</a>
         <a href="d" class="yellow small btn">Programming Tools</a>
@@ -50,8 +52,11 @@
         
 
 <script type="text/javascript">
-    $(document).ready( function () {
-    $('#maps').DataTable();
+$(document).ready(function() {
+    $('#maps').dataTable({
+        "aLengthMenu": [[25, 50, 75, -1], [25, 50, 75, "All"]],
+        "iDisplayLength": 25
+    });
 } );
 </script>
     </body> 

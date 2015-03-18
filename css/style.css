@@ -15,6 +15,13 @@ body { font-family: 'Open Sans', sans-serif; padding-right: 0px; padding-left: 0
 }
 
 .small.btn {
+  line-height: 200px;
+  width: 200px;
+  padding: 50 50px;
+
+}
+
+.med.btn {
   line-height: 250px;
   width: 250px;
   padding: 50 50px;
