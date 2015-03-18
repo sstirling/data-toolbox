@@ -66,9 +66,12 @@
         </tbody>
         </table>
         <script>
-        $(document).ready( function () {
-        $('#tools').DataTable();
-        } );
+     $(document).ready(function() {
+    $('#maps').dataTable({
+        "aLengthMenu": [[25, 50, 75, -1], [25, 50, 75, "All"]],
+        "iDisplayLength": 25
+    });
+} );
         </script>
         <script type="text/javascript">
             var map = L.map('map').setView([40.705628, -74.344482], 11);
