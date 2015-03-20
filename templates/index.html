@@ -5,14 +5,12 @@
         <!-- Begin style -->
         <link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.10.5/css/jquery.dataTables.min.css">
         <link rel="stylesheet" type="text/css" href="http://s3.amazonaws.com/nj-data/test/style.css">
-        <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
         <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
         <!--End Style -->
 
         <!-- Begin Scripts -->
         <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-        <script type="text/javascript" src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js?2"></script>
         <script type="text/javascript" src="http://cdn.datatables.net/1.10.5/js/jquery.dataTables.min.js"></script>
         
 
@@ -40,7 +38,11 @@
 <img src="http://www.njadvancemedia.com/wp-content/uploads/2014/05/NJAM_RGB_SiteLogo-300x53.png" alt="#" display="block" height="40%" width="30%" align="right" hspace="30" vspace="5">
 <br>
 <br>
+
 If you have questions about any of this, please e-mail <a href="mailto:castudillo@njadvancemedia.com">Carla Astudillo</a> or <a href="mailto:sstirling@njadvancemedia.com">Stephen Stirling</a> on the data desk.</div>
+<br>
+<br>
+<br>
 <br>
 <br>
 <br>
@@ -79,7 +81,7 @@ If you have questions about any of this, please e-mail <a href="mailto:castudill
         <br>
         <br>
         <div align=center><a href="https://njgin.state.nj.us/NJ_NJGINExplorer/index.jsp" class="teal large btn">NJ GIS Data</a>
-        <a href="https://data.nj.gov/" class="green large btn">Data Warehouse (Coming Soon)</a>
+        <a href="https://data.nj.gov/" class="green large btn">Data Warehouse</a>
         <a href="3" class="yellow large btn">Data Viz Embed Codes</a></div>
         <br>
         <br>
@@ -133,44 +135,6 @@ If you have questions about any of this, please e-mail <a href="mailto:castudill
     });
 } );
         </script>
-        <script type="text/javascript">
-            var map = L.map('map').setView([40.705628, -74.344482], 11);
-            var mapquestLayer = new L.TileLayer('http://{s}.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.png', {
-                maxZoom: 18,
-                attribution: 'Data, imagery and map information provided by <a href="http://open.mapquest.co.uk" target="_blank">MapQuest</a>,<a href="http://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> and contributors.',
-                subdomains: ['otile1','otile2','otile3','otile4']
-            });
-            map.addLayer(mapquestLayer);
-
-            var data = {
-              "type": "FeatureCollection",
-              "features": [
-                {% for obj in object_list %}
-                {
-                  "type": "Feature",
-                  "properties": {
-                    "full_name": "{{ obj.full_name }}",
-                    "id": "{{ obj.id }}"
-                  },
-                  "geometry": {
-                    "type": "Point",
-                    "coordinates": [{{ obj.x }}, {{ obj.y }}]
-                  }
-                }{% if not loop.last %},{% endif %}
-                {% endfor %}
-              ]
-            };
-         var dataLayer = L.geoJson(data, {
-                onEachFeature: function(feature, layer) {
-                    layer.bindPopup(
-                        '<a href="' + feature.properties.id + '/">' +
-                            feature.properties.full_name +
-                        '</a>'
-                    );
-                }
-            });
-              map.addLayer(dataLayer);
-
-        </script>
+       
     </body>
 </html>

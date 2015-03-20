@@ -1,4 +1,4 @@
-body { font-family: 'Open Sans', sans-serif; padding-right: 0px; padding-left: 0px; height: auto; background-color: #f0f0f0; margin-right:50px; margin-left:50px; margin-top:25px;}
+body { font-family: 'Open Sans', sans-serif; padding-right: 0px; padding-left: 0px; height: auto; background-color: #f0f0f0; margin-right:75px; margin-left:75px; margin-top:25px;}
 
 
 .btn {
@@ -29,8 +29,8 @@ body { font-family: 'Open Sans', sans-serif; padding-right: 0px; padding-left: 0
 }
 
 .large.btn {
-  line-height: 250px;
-  width: 250px;
+  line-height: 225px;
+  width: 225px;
   padding: 0 3.5em; 
 }
 
@@ -196,3 +196,6 @@ p.sort-text {
 	
 	color: #c0d72f;
 }
+
+.svg path 
+{fill: "green" !important;}

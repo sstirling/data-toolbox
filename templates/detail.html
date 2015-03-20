@@ -3,6 +3,12 @@
     <head>
 
         <link rel="stylesheet" type="text/css" href="http://s3.amazonaws.com/nj-data/test/style.css">
+        <!-- Begin Scripts -->
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-2.1.3.js"></script>
+
+        <!-- End Scripts -->
+
 
     </head>
     
@@ -46,12 +52,48 @@
     <p class="sort-text">What it does</p>
     <p><div class="descripBig">{{ object.description}}</div></p>
     <hr>
-    <div class="descrip"><p><b>Pay Service?</b> {{ object.pay_service }}     
-    <p><b>NJAM License?</b> {{ object.njam_license }}     
-    <p><b>iFrame Compatible?</b> {{ object.iframe_compatibility }}
+    <div class="descrip">
+    <table>  
+    <tr><td><b>Pay Service?</b></td><td>{{ object.pay_service }}</td><td><img src="{{ object.pay_img }}" alt="#" height="50" width="50" class="svg"></td></tr>       
+    <tr><td><b>NJAM License?</b></td> <td>{{ object.njam_license }}</td><td><img src="{{ object.license_img }}" alt="#" height="50" width="50" class="svg"></td></tr>    
+    <tr><td><b>iFrame Compatible?</b></td><td>{{ object.iframe_compatibility }}</td><td><img src="{{ object.iframe_img }}" alt="#" height="50" width="50" class="svg"></td></tr>
+    </table>
     <p><b>Website:</b> <a href="{{ object.website }}/">{{ object.website }}</a>
+    
     <p><b>Notes:</b> {{object.notes}} </div>
 
+<script>
+$(function(){
+    jQuery('img.svg').each(function(){
+        var $img = jQuery(this);
+        var imgID = $img.attr('id');
+        var imgClass = $img.attr('class');
+        var imgURL = $img.attr('src');
+    
+        jQuery.get(imgURL, function(data) {
+            // Get the SVG tag, ignore the rest
+            var $svg = jQuery(data).find('svg');
+    
+            // Add replaced image's ID to the new SVG
+            if(typeof imgID !== 'undefined') {
+                $svg = $svg.attr('id', imgID);
+            }
+            // Add replaced image's classes to the new SVG
+            if(typeof imgClass !== 'undefined') {
+                $svg = $svg.attr('class', imgClass+' replaced-svg');
+            }
+    
+            // Remove any invalid XML tags as per http://validator.w3.org
+            $svg = $svg.removeAttr('xmlns:a');
+    
+            // Replace image with new SVG
+            $img.replaceWith($svg);
+    
+        }, 'xml');
+    
+    });
+});
+</script>
 
 
     </body> 
