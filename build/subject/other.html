@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+        <!-- Begin style -->
+        <link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.10.5/css/jquery.dataTables.min.css">
+        <link rel="stylesheet" type="text/css" href="http://s3.amazonaws.com/nj-data/test/style.css">
+        <!--End Style -->
+
+        <!-- Begin Scripts -->
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script type="text/javascript" src="http://cdn.datatables.net/1.10.5/js/jquery.dataTables.min.js"></script>
+</head>
+    
+
+<body>
+
+        <div align=center>
+
+        <a href="/index.html" class="orange med btn">Home</a>
+        <a href="a" class="yellow med btn">Ask a Question</a>
+        <a href="b" class="green med btn">Submit a Data Request</a>
+        <a href="c" class="teal med btn">Data Warehouse</a>
+        <a href="d" class="navy med btn">Tutorials</a>
+        <br>
+        <br>
+        <a href="a" class="navy med btn">Mapping Tools</a>
+        <a href="b" class="teal med btn">Charting Tools</a>
+        <a href="c" class="green med btn">Analyzing Data</a>
+        <a href="d" class="yellow med btn">Programming Tools</a>
+        <a href="e" class="orange med btn">Other Data Tools</a></div>
+<br>
+<br>
+<br>
+<div class="graphicHeader">Other</div>
+<br>
+<br>
+<div class="graphicSubhead"> The Other page sort of runs the gamut of miscellaneous data stuff. Here you'll find design tools, audio embedding tools and anything else that doesn't quite fit into one of the named categories.
+</div>
+<br>
+<br>
+ <p class="sort-text">Click on the name of the program for more detailed information.</p>
+<br>
+<br>
+
+<table id="other" class="display"><thead>
+
+<tr><th>program</th><th>type</th><th>skill_level</th><th>sitelink</th></tr>
+</thead>
+<tbody>
+ <tr><td>Color Brewer</td><td>Design</td><td>Beginner</td><td><a href="http://colorbrewer2.org/">http://colorbrewer2.org/</a></td></tr>
+ <tr><td>Color Picker</td><td>Design</td><td>Beginner</td><td><a href="http://www.colorpicker.com/">http://www.colorpicker.com/</a></td></tr>
+ <tr><td>Document Cloud</td><td>Document analysis/embedding</td><td>Beginner</td><td><a href="https://www.documentcloud.org/home">https://www.documentcloud.org/home</a></td></tr>
+ <tr><td>PuTTy</td><td>Other Visualization Tools</td><td>Advanced</td><td><a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html">http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html</a></td></tr>
+ <tr><td>Timeline.JS</td><td>Timeline</td><td>Intermediate</td><td><a href="http://timeline.knightlab.com/">http://timeline.knightlab.com/</a></td></tr>
+ <tr><td>Thinglink</td><td>Data Viz</td><td>Beginner</td><td><a href="http://www.thinglink.com/">http://www.thinglink.com/</a></td></tr>
+ <tr><td>SoundCite</td><td>Audio Embedding</td><td>Beginner to Intermediate</td><td><a href="http://soundcite.knightlab.com/">http://soundcite.knightlab.com/</a></td></tr>
+ <tr><td>Schooner</td><td>Satellite Imagery</td><td>Advanced</td><td><a href="https://github.com/propublica/schooner-tk">https://github.com/propublica/schooner-tk</a></td></tr>
+ <tr><td>Bokeh</td><td>Other Visualization Tools</td><td>Advanced</td><td><a href="https://github.com/developmentseed/landsat-util">https://github.com/developmentseed/landsat-util</a></td></tr>
+ <tr><td>Timeline Curator</td><td>Timeline</td><td>Intermediate to Advanced</td><td><a href="https://github.com/developmentseed/landsat-util">https://github.com/developmentseed/landsat-util</a></td></tr>
+ <tr><td>CloudStitch</td><td>Data Viz</td><td>Intermediate to Advanced</td><td><a href="https://cloudstitch.io">https://cloudstitch.io</a></td></tr>
+</table>
+
+
+
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#other').dataTable({
+        "aLengthMenu": [[25, 50, 75, -1], [25, 50, 75, "All"]],
+        "iDisplayLength": 25
+    });
+} );
+</script>
+    </body> 
+</html>
