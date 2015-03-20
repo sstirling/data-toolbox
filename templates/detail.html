@@ -12,33 +12,45 @@
     <br>
 
         <div align=center>
-        <a href="/index.html" class="blue small btn">Home</a>
-        <a href="a" class="navy small btn">Mapping Tools</a>
-        <a href="b" class="teal small btn">Charting Tools</a>
-        <a href="c" class="green small btn">Getting and Analyzing Data</a>
-        <a href="d" class="yellow small btn">Programming Tools</a>
-        <a href="e" class="orange small btn">Other Data Tools</a></div>
+
+        <a href="/index.html" class="orange med btn">Home</a>
+        <a href="a" class="yellow med btn">Ask a Question</a>
+        <a href="b" class="green med btn">Submit a Data Request</a>
+        <a href="c" class="teal med btn">Data Warehouse</a>
+        <a href="d" class="navy med btn">Tutorials</a>
+        <br>
+        <br>
+        <a href="a" class="navy med btn">Mapping Tools</a>
+        <a href="b" class="teal med btn">Charting Tools</a>
+        <a href="c" class="green med btn">Analyzing Data</a>
+        <a href="d" class="yellow med btn">Programming Tools</a>
+        <a href="e" class="orange med btn">Other Data Tools</a></div>
+        <br>
+  
         <br>
         <br>
         <br>
        
     <img src="{{ object.image }}" alt="#" align="left" hspace="30" vspace="5">
     <img src="http://www.njadvancemedia.com/wp-content/uploads/2014/05/NJAM_RGB_SiteLogo-300x53.png" alt="#" height="30%" width="30%" align="right" hspace="30" vspace="5">
-    <h1 align="center"> Product Details</h1>
     <br>
     <br>
     <br>
-    <h1>{{ object.program }}</h1>
-    <p><b>Type of Program: </b>{{ object.type }}</p>
     <br>
-    <p><h3>{{ object.description}}</h3></p>
     <br>
-    <p>Skill Level: {{ object.skill_level }}
-    <p>Pay Service? {{ object.pay_service }}     
-    <p>NJAM License? {{ object.njam_license }}     
-    <p>iFrame Compatible? {{ object.iframe_compatibility }}
-    <p>Website: <a href="{{ object.website }}/">{{ object.website }}</a>
-    <p>Notes: {{object.notes}} 
+    <br>
+    <br>
+    <p><div class="graphicHeaderDetail">{{ object.program }}</div></p>
+    <p><div class="descripDetail"><b>Type of Program: </b>{{ object.type }}</div></p>
+    <p><div class="descripDetail"><b>Skill Level: </b>{{ object.skill_level }}</div></p>
+    <p class="sort-text">What it does</p>
+    <p><div class="descripBig">{{ object.description}}</div></p>
+    <hr>
+    <div class="descrip"><p><b>Pay Service?</b> {{ object.pay_service }}     
+    <p><b>NJAM License?</b> {{ object.njam_license }}     
+    <p><b>iFrame Compatible?</b> {{ object.iframe_compatibility }}
+    <p><b>Website:</b> <a href="{{ object.website }}/">{{ object.website }}</a>
+    <p><b>Notes:</b> {{object.notes}} </div>
 
 
 

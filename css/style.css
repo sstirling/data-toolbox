@@ -171,6 +171,12 @@ p.sort-text {
 	font-size: 14px;
 }
 
+.descripDetail {
+	
+	width: 90%;
+	font-size: 19px;
+}
+
 .descripBig {
 	
 	width: 90%;
@@ -180,6 +186,13 @@ p.sort-text {
 .graphicHeaderBig {
 	font-family: 'Oswald', sans-serif;
 	font-size: 60px;
+	
+	color: #c0d72f;
+}
+
+.graphicHeaderDetail {
+	font-family: 'Oswald', sans-serif;
+	font-size: 45px;
 	
 	color: #c0d72f;
 }
