@@ -100,6 +100,15 @@ body { font-family: 'Open Sans', sans-serif; padding-right: 0px; padding-left: 0
 
 	color: #646464;
 }
+
+.graphicSubheadBig {
+	font-family: 'Oswald', sans-serif;
+	font-size: 18px;
+	margin: 5px 0 5px;
+
+	color: #646464;
+}
+
 p.sort-text {
 	font-family: 'Source Sans Pro', sans-serif;
 	border-top: 1px solid #b4b5b4;
