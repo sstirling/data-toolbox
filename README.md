@@ -13,11 +13,11 @@ Table on Tutorials page scraped from <a href="http://blog.chryswu.com/">Chrys Wu
 
 From this data portal template reporters in the newsroom can: 
 
-&bull; Submit a data request to the project management system or ask a question
-&bull; Get raw data 
-&bull; Find tools to get, clean, analyze and visualize data
-&bull; Access nearly 600 NICAR tutorials and presentations through a searchable database
-&bull; Grab embeds for already made, evergreen data viz
+&bull; Submit a data request to the project management system or ask a question<br>
+&bull; Get raw data <br>
+&bull; Find tools to get, clean, analyze and visualize data<br>
+&bull; Access nearly 600 NICAR tutorials and presentations through a searchable database<br>
+&bull; Grab embeds for already made, evergreen data viz<br>
 &bull; Access state GIS warehouse
 
 
