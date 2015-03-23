@@ -22,7 +22,7 @@
         <a href="http://sstirling.github.io/data-toolbox/build/index.html" class="orange med btn">Home</a>
         <a href="mailto:castudillo@njadvancemedia.com,sstirling@njadvancemedia.com" class="yellow med btn">Ask a Question</a>
         <a href="https://docs.google.com/forms/d/18egwYfJnOMkA_SQFCEba37MyHAllReU-Ns0erMWQIrA/viewform?usp=send_form" class="green med btn">Submit a Data Request</a>
-        <a href="https://data.nj.gov/" class="teal med btn">Data Warehouse</a>
+        <a href="http://sstirling.github.io/data-toolbox/build/subject/data.html" class="teal med btn">Data Warehouse</a>
         <a href="http://sstirling.github.io/data-toolbox/build/subject/tutorials.html" class="navy med btn">Tutorials</a>
         <br>
         <br>
@@ -36,7 +36,7 @@
 <div class="graphicHeader">Tutorials</div>
 <br>
 <br>
-<div class="graphicSubhead"> From the tutorials page, you can search through the nearly 600 presentations made at IRE's NICAR conference from 2013 to 2015. Looking for story ideas? There are beat specific presentations on using data on your beat and tons of work samples from projects people have done around the country. Don't know what you want to work on? Try searching "50 story ideas." Want to learn some new tricks in Excel? There are more than a dozen presentations or tipsheets on Excel alone. Kudos to <a href="http://www.twitter.com/MacDiva">Chrys Wu</a> for providing this wonderful resource year-after-year.
+<div class="graphicSubhead"> From the tutorials page, you can search through the nearly 600 presentations made at IRE's NICAR conference from 2013 to 2015. Looking for story ideas? There are beat specific presentations on using data on your beat and tons of work samples from projects people have done around the country. Looking for inspiration? Try searching "50 ideas." Want to learn some new tricks in Excel? There are more than a dozen presentations or tipsheets on Excel alone. Kudos to <a href="http://www.twitter.com/MacDiva">Chrys Wu</a> for providing this wonderful resource year-after-year.
 <br>
 <br>
 Ron Campbell, formerly of the Orange County Register, once told the Ledger's data team "If you're doing this and you're not learning something every day, you're doing it wrong." So learn up!
@@ -650,6 +650,7 @@ Ron Campbell, formerly of the Orange County Register, once told the Ledger's dat
 <script type="text/javascript">
 $(document).ready(function() {
     $('#tutorials').dataTable({
+         "order": [[ 0, "desc" ]],
         "aLengthMenu": [[25, 50, 75, -1], [25, 50, 75, "All"]],
         "iDisplayLength": 25
     });
